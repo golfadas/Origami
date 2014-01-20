@@ -379,7 +379,7 @@ class AutoZoomOnFocus(sublime_plugin.EventListener):
 		# than e.g. "origami_auto_zoom_on_focus": .8.
 		if fraction != True:
 			args["fraction"] = fraction
-		view.window().run_command("zoom_pane", args)
+		sublime.active_window().run_command("zoom_pane", args)
 		self.running = False
 	
 	def on_activated(self, view):
